@@ -22,7 +22,7 @@ app.post("/", (req,res) =>{
     //console.log(req.body.cityName);
 
     query = req.body.cityName;
-    id = "9a8a1b3b9257938e4439859912476584";
+    id = process.env.ID;
     const url ="https://api.openweathermap.org/data/2.5/weather?&q=" + query + "&appid="+ id +"&units=metric" ;
     https.get(url,(response) => {
        // console.log(response.statusCode);
